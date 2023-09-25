@@ -1,0 +1,4 @@
+rootProject.name = 'spring-and-angular_group1_ams'
+
+include 'subproject1'
+include 'subproject3' , 'subproject2'

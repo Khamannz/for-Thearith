@@ -1,0 +1,23 @@
+
+
+version: '3'
+services:
+  keycloak:
+    image: jboss/keycloak:16.1.1
+    ports:
+      - 1111:8080
+    environment:
+      - DB_VENDOR=postgres
+      - DB_ADDR=postgres
+      - DB_PORT=5432
+      - DB_DATABASE=haha
+      - DB_USER=mann
+      - DB_PASSWORD=mann
+      - KEYCLOAK_USER=admin
+      - KEYCLOAK_PASSWORD=admin
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_DB=haha
+      - POSTGRES_USER=mann
+      - POSTGRES_PASSWORD=mann
